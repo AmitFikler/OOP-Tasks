@@ -30,4 +30,34 @@ class Person{
 }
 
 
-newPerson = new Person("amit","fikler", 100, 21,50)
+class Player extends Person{
+    constructor(firstName, sureName, salary, age, id, strongLeg, position, celebrationSentence){
+        super(firstName, sureName, salary, age, id);
+        this.strongLeg = strongLeg
+        this.position = position
+        this.celebrationSentence = celebrationSentence
+    }
+    goalClebration() {
+        console.log("Goal Goal Goal Goal Goal !!!!⚽️⚽️⚽️")
+        console.log(this.celebrationSentence)
+        this.salary = this.salary * 102.5 / 100
+        console.log(`Your salary has increased by 2.5%. Now your salary is: ${this.salary}$`);
+    }
+    set changeCelebrationSentence(val){
+        this.celebrationSentence = val
+        console.log(`goal clebration: ${this.celebrationSentence}`);
+    }
+
+}
+
+
+class GoalKeeper extends Person {
+    constructor(firstName, sureName, salary, age, id, isLeftHanded, lastGoalConceded){
+        super(firstName, sureName, salary, age, id);
+        this.isLeftHanded = isLeftHanded;
+        this.lastGoalConceded = undefined
+    }
+    
+}
+
+let newPlayer = new Player("Amit","Fikler",1020,22,50,"left","S","🤸")
