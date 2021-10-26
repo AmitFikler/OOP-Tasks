@@ -67,5 +67,28 @@ class ElectricGuitar extends ClassicGuitar {
     }
 }
 
+
+class BassGuitar extends ClassicGuitar {
+    constructor(manufactureYear, brand, price, numberOfString = 4, id) {
+      super(manufactureYear, brand, price, numberOfString = 4, id);
+    }
+    play(){
+        if (this.used === false){
+            this.used = true;
+            this.price = (this.price * 90) / 100;
+            console.log("🔊🔊🔊")
+            console.log(`The price of the guitar has dropped by 10% - the price now is:${this.price}$`)
+        }else {
+            console.log("🔊🔊🔊")
+        }
+    }
+
+    playSolo() {
+        let arrOfEmojis = ["💥", "🤘", "🎵", "📢", "💢", "🕺"]
+        return arrOfEmojis.sort(() => 0.5 - Math.random());
+    }
+}
+
 let newGuiter = new ClassicGuitar(2000,"Gibson",1600,6,9)
 let newElectricGuitar = new ElectricGuitar(2021,"Fender",2000,6,10,true)
+let newBassGuitar = new BassGuitar(2017,"Yamaha",900,4,100)
