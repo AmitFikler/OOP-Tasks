@@ -49,4 +49,23 @@ class ClassicGuitar{
     }
 }
 
-let newGuiter = new ClassicGuitar(2000,"amit",1600,6,9)
+
+class ElectricGuitar extends ClassicGuitar {
+    constructor(manufactureYear, brand, price, numberOfString = 6, id, longNeck) {
+      super(manufactureYear, brand, price, numberOfString = 6, id);
+      this.longNeck = longNeck
+    }
+    play(){
+        if (this.used === false){
+            this.used = true;
+            this.price = (this.price * 90) / 100;
+            console.log("🎸🎸🎸")
+            console.log(`The price of the guitar has dropped by 10% - the price now is:${this.price}$`)
+        }else {
+            console.log("🎸🎸🎸")
+        }
+    }
+}
+
+let newGuiter = new ClassicGuitar(2000,"Gibson",1600,6,9)
+let newElectricGuitar = new ElectricGuitar(2021,"Fender",2000,6,10,true)
