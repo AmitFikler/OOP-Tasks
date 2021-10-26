@@ -57,7 +57,17 @@ class GoalKeeper extends Person {
         this.isLeftHanded = isLeftHanded;
         this.lastGoalConceded = undefined
     }
-    
+    concededAGoal(){
+        console.log("oh no!😱😱😱")
+        this.lastGoalConceded = new Date().toLocaleString();
+        this.salary = this.salary * 97.5 / 100
+        console.log(`Your salary dropped by 2.5%. Now your salary is: ${this.salary}$`);
+    }
+
+    get getLastGoal(){
+        return this.lastGoalConceded
+    }
 }
 
 let newPlayer = new Player("Amit","Fikler",1020,22,50,"left","S","🤸")
+let newGoalKeeper = new GoalKeeper("Dani", "Red", 1000, 40,102,true,undefined)
