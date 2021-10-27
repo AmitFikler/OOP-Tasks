@@ -89,6 +89,4 @@ class BassGuitar extends ClassicGuitar {
     }
 }
 
-let newGuiter = new ClassicGuitar(2000,"Gibson",1600,6,9)
-let newElectricGuitar = new ElectricGuitar(2021,"Fender",2000,6,10,true)
-let newBassGuitar = new BassGuitar(2017,"Yamaha",900,4,100)
+module.exports = {ClassicGuitar,ElectricGuitar,BassGuitar}

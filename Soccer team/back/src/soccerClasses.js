@@ -5,7 +5,7 @@ class Person{
         this.sureName = sureName;
         this.salary = salary;
         this.age = age;
-        this.#id = id
+        this.id = id
     }
 
     get getFullName(){
@@ -26,6 +26,24 @@ class Person{
 
     get getYearOfBirth(){
         return (new Date().getFullYear() - this.age)
+    }
+}
+
+class GoalKeeper extends Person {
+    constructor(firstName, sureName, salary, age, id, isLeftHanded, lastGoalConceded){
+        super(firstName, sureName, salary, age, id);
+        this.isLeftHanded = isLeftHanded;
+        this.lastGoalConceded = undefined
+    }
+    concededAGoal(){
+        console.log("oh no!😱😱😱")
+        this.lastGoalConceded = new Date().toLocaleString();
+        this.salary = this.salary * 97.5 / 100
+        console.log(`Your salary dropped by 2.5%. Now your salary is: ${this.salary}$`);
+    }
+
+    get getLastGoal(){
+        return this.lastGoalConceded
     }
 }
 
@@ -51,23 +69,4 @@ class Player extends Person{
 }
 
 
-class GoalKeeper extends Person {
-    constructor(firstName, sureName, salary, age, id, isLeftHanded, lastGoalConceded){
-        super(firstName, sureName, salary, age, id);
-        this.isLeftHanded = isLeftHanded;
-        this.lastGoalConceded = undefined
-    }
-    concededAGoal(){
-        console.log("oh no!😱😱😱")
-        this.lastGoalConceded = new Date().toLocaleString();
-        this.salary = this.salary * 97.5 / 100
-        console.log(`Your salary dropped by 2.5%. Now your salary is: ${this.salary}$`);
-    }
-
-    get getLastGoal(){
-        return this.lastGoalConceded
-    }
-}
-
-let newPlayer = new Player("Amit","Fikler",1020,22,50,"left","S","🤸")
-let newGoalKeeper = new GoalKeeper("Dani", "Red", 1000, 40,102,true,undefined)
+module.exports = {Person,Player,GoalKeeper}

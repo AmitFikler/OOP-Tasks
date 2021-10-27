@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+     <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+     <!-- Bootstrap core CSS -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Material Design Bootstrap -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet">  
+     <!-- required for sticky footer -->
+</head>
+<body>
+    <form class="border border-primary" id= "form">
+    <div class="form-group row">
+      <label for="inputname" class="col-sm-2 col-form-label">First Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputName" placeholder="First Name">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputLastName" class="col-sm-2 col-form-label">Last Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
+      </div>
+    </div>
+    <div class="form-group row">
+        <label for="salary" class="col-sm-2 col-form-label">Salary</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputSalary" placeholder="salary">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="age" class="col-sm-2 col-form-label">Age</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="inputAge" placeholder="age">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="id" class="col-sm-2 col-form-label">Id</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputId" placeholder="id">
+        </div>
+    </div>
+    <fieldset class="form-group">
+          <div class="col-sm-10">
+            <legend class="col-form-label col-sm-2 pt-0"></legend>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="PlayerRadio" id="PlayerRadio" value="Player">
+              <label class="form-check-label" for="PlayerRadio">
+                Player
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="Goal-KeeperRadio" id="Goal-KeeperRadio" value="Goal-KeeperRadio">
+              <label class="form-check-label" for="Goal-KeeperRadio">
+                Goal Keeper
+              </label>
+            </div>
+        </div>
+    </div>
+      </fieldset>
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </form>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>  
+    <!-- add axios with cdn - still no build tools needed -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./index.js" defer></script>
+</body>
+</html>
